@@ -98,7 +98,7 @@ export default function Profile({ mode, url, name, email }) {
 
       <div className="max-w-4xl mx-auto mt-12">
         <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}>
-          // Installed Skills
+          {"// Installed Skills"}
         </h2>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, idx) => (
@@ -115,7 +115,7 @@ export default function Profile({ mode, url, name, email }) {
 
       <div className="max-w-4xl mx-auto mt-12">
         <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}>
-          // Education Log
+          {"// Education Log"}
         </h2>
         <div className="space-y-3">
           {education.map((item, idx) => (
@@ -147,7 +147,7 @@ export default function Profile({ mode, url, name, email }) {
 
       <div className="max-w-4xl mx-auto mt-12">
         <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}>
-          // Highlighted Projects
+          {"// Highlighted Projects"}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((proj, idx) => (
