@@ -17,7 +17,7 @@ const Header = (props) => {
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between md:items-center px-4 gap-2 md:gap-0">
         {/* Contact info */}
         <div className="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-1 md:space-y-0">
-          
+          <a
             href={`tel:${props.tel}`}
             className="text-sm flex items-center gap-1.5 hover:opacity-80 transition"
             style={{ color: muted }}
@@ -26,7 +26,7 @@ const Header = (props) => {
             {props.tel}
           </a>
 
-          
+          <a
             href={`mailto:${props.email}`}
             className="text-sm flex items-center gap-1.5 hover:opacity-80 transition"
             style={{ color: muted }}
