@@ -55,78 +55,49 @@ export default function Profile({ mode, url, name, email }) {
     },
   ];
 
-  // ---- Design tokens ----
   const bg = isDark ? "#0B0E14" : "#F5F6F8";
   const panel = isDark ? "#111621" : "#FFFFFF";
   const border = isDark ? "#232B3A" : "#E2E5EA";
   const text = isDark ? "#E6E8EB" : "#161A23";
   const muted = isDark ? "#8B93A1" : "#5B6472";
-  const accent = "#E3B341"; // amber — terminal cursor / active-tab tone
-  const accent2 = "#4FD1C5"; // teal — secondary syntax-like accent
+  const accent = "#E3B341";
+  const accent2 = "#4FD1C5";
 
   return (
-    <div
-      style={{ backgroundColor: bg, color: text, fontFamily: "'Inter', sans-serif" }}
-      className="min-h-screen w-full px-4 py-12"
-    >
-      {/* Terminal-style header */}
-      <div
-        className="max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg"
-        style={{ backgroundColor: panel, border: `1px solid ${border}` }}
-      >
-        {/* Fake window chrome */}
-        <div
-          className="flex items-center gap-2 px-4 py-3"
-          style={{ borderBottom: `1px solid ${border}` }}
-        >
-          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#FF5F56" }} />
-          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#FFBD2E" }} />
-          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#27C93F" }} />
-          <span
-            className="ml-3 text-xs"
-            style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}
-          >
+    <div style={{ backgroundColor: bg, color: text, fontFamily: "'Inter', sans-serif" }} className="min-h-screen w-full px-4 py-12">
+
+      <div className="max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg" style={{ backgroundColor: panel, border: `1px solid ${border}` }}>
+        <div className="flex items-center gap-2 px-4 py-3" style={{ borderBottom: `1px solid ${border}` }}>
+          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#FF5F56" }}></span>
+          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#FFBD2E" }}></span>
+          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: "#27C93F" }}></span>
+          <span className="ml-3 text-xs" style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}>
             ~/portfolio/whoami.sh
           </span>
         </div>
 
         <div className="px-6 py-8 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-          <div
-            className="rounded-lg overflow-hidden shrink-0 h-32 w-32"
-            style={{ border: `2px solid ${accent}` }}
-          >
+          <div className="rounded-lg overflow-hidden shrink-0 h-32 w-32" style={{ border: `2px solid ${accent}` }}>
             <img src={url} alt={name} className="w-full h-full object-cover" />
           </div>
 
           <div style={{ fontFamily: "'JetBrains Mono', monospace" }}>
-            <p className="text-sm" style={{ color: accent2 }}>
-              $ whoami
-            </p>
+            <p className="text-sm" style={{ color: accent2 }}>$ whoami</p>
             <h1 className="text-3xl font-bold mt-1">{name}</h1>
-            <p className="mt-1" style={{ color: accent }}>
-              &gt; Full Stack Web Developer (MERN)
-            </p>
-            <p className="text-sm mt-2" style={{ color: muted }}>
-              {email}
-            </p>
+            <p className="mt-1" style={{ color: accent }}>&gt; Full Stack Web Developer (MERN)</p>
+            <p className="text-sm mt-2" style={{ color: muted }}>{email}</p>
           </div>
         </div>
       </div>
 
-      {/* About */}
       <div className="max-w-3xl mx-auto text-center mt-8">
         <p className="text-lg" style={{ color: muted }}>
-          Passionate full-stack developer focused on building modern, scalable
-          web applications with clean UI and optimized backend logic.
+          Passionate full-stack developer focused on building modern, scalable web applications with clean UI and optimized backend logic.
         </p>
       </div>
 
-      {/* Skills — tag/extension style */}
       <div className="max-w-4xl mx-auto mt-12">
-        <h2
-          className="text-xs uppercase tracking-widest mb-4"
-          style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}
-        >
+        <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}>
           // Installed Skills
         </h2>
         <div className="flex flex-wrap gap-2">
@@ -134,12 +105,7 @@ export default function Profile({ mode, url, name, email }) {
             <span
               key={idx}
               className="px-3 py-1.5 rounded-md text-sm"
-              style={{
-                backgroundColor: panel,
-                border: `1px solid ${border}`,
-                fontFamily: "'JetBrains Mono', monospace",
-                color: text,
-              }}
+              style={{ backgroundColor: panel, border: `1px solid ${border}`, fontFamily: "'JetBrains Mono', monospace", color: text }}
             >
               {skill}
             </span>
@@ -147,12 +113,8 @@ export default function Profile({ mode, url, name, email }) {
         </div>
       </div>
 
-      {/* Education — file-tree style */}
       <div className="max-w-4xl mx-auto mt-12">
-        <h2
-          className="text-xs uppercase tracking-widest mb-4"
-          style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}
-        >
+        <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}>
           // Education Log
         </h2>
         <div className="space-y-3">
@@ -165,9 +127,7 @@ export default function Profile({ mode, url, name, email }) {
               <div>
                 <h3 className="text-lg font-semibold">{item.title}</h3>
                 {item.sub && (
-                  <p className="text-sm mt-1" style={{ color: muted }}>
-                    {item.sub}
-                  </p>
+                  <p className="text-sm mt-1" style={{ color: muted }}>{item.sub}</p>
                 )}
               </div>
               <span
@@ -185,59 +145,39 @@ export default function Profile({ mode, url, name, email }) {
         </div>
       </div>
 
-      {/* Projects — commit/card style */}
       <div className="max-w-4xl mx-auto mt-12">
-        <h2
-          className="text-xs uppercase tracking-widest mb-4"
-          style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}
-        >
+        <h2 className="text-xs uppercase tracking-widest mb-4" style={{ color: muted, fontFamily: "'JetBrains Mono', monospace" }}>
           // Highlighted Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((proj, idx) => (
-            <div
-              key={idx}
-              className="p-5 rounded-lg"
-              style={{ backgroundColor: panel, border: `1px solid ${border}` }}
-            >
+            <div key={idx} className="p-5 rounded-lg" style={{ backgroundColor: panel, border: `1px solid ${border}` }}>
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold">{proj.title}</h3>
                 <span
                   className="text-xs px-2 py-0.5 rounded"
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    color: accent2,
-                    border: `1px solid ${accent2}`,
-                  }}
+                  style={{ fontFamily: "'JetBrains Mono', monospace", color: accent2, border: `1px solid ${accent2}` }}
                 >
                   {proj.stack}
                 </span>
               </div>
-              <p className="mt-2 text-sm" style={{ color: muted }}>
-                {proj.desc}
-              </p>
+              <p className="mt-2 text-sm" style={{ color: muted }}>{proj.desc}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Resume Button */}
       <div className="flex justify-center mt-14">
         
           href="/mayank_full_stack_web_developer.pdf"
           download="mayank_full_stack_web_developer.pdf"
           className="px-6 py-3 rounded-lg text-lg font-semibold shadow-lg transition"
-          style={{
-            backgroundColor: accent,
-            color: "#0B0E14",
-            fontFamily: "'JetBrains Mono', monospace",
-          }}
-          onMouseOver={(e) => (e.currentTarget.style.opacity = 0.85)}
-          onMouseOut={(e) => (e.currentTarget.style.opacity = 1)}
+          style={{ backgroundColor: accent, color: "#0B0E14", fontFamily: "'JetBrains Mono', monospace" }}
         >
           ./download_resume.sh
         </a>
       </div>
+
     </div>
   );
 }
