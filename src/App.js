@@ -12,7 +12,7 @@ import Experience from "./pages/Experience";
 
 const name = "Mayank Chauhan";
 const email = "chauhanmayank.009.m@gmail.com";
-const imgurl = "mayank-chauhan-bg.jpeg";
+const imgurl = "new-profile-image-generated.png";
 const tel = "+917465942719";
 
 function App() {
