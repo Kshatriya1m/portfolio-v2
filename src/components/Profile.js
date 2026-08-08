@@ -202,7 +202,7 @@ export default function Profile({ mode, url, name, email }) {
       </div>
 
       <div className="flex justify-center mt-16">
-        
+        <a
           href="/mayank_full_stack_web_developer.pdf"
           download="mayank_full_stack_web_developer.pdf"
           className="px-8 py-4 rounded-xl text-base font-bold shadow-lg transition"
