@@ -39,6 +39,10 @@ export default function Profile({ mode, url, name, email }) {
 
   const education = [
     {
+      title: "MCA - Master of Computer Applications",
+      sub: "Pursuing MCA with a specialization in Artificial Intelligence and Machine Learning",
+    },
+    {
       title: "BCA – Bachelor of Computer Applications",
       sub: "Graduated with hands-on experience in full-stack development",
     },
