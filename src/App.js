@@ -16,7 +16,7 @@ const imgurl = "new-profile-image-generated.png";
 const tel = "+917465942719";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
 
   const togglemode = () => {
     if (mode === "light") {
