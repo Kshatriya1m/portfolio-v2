@@ -10,7 +10,7 @@ const Header = (props) => {
   const indigo = "#6366F1";
 
   return (
-    <div className="sticky top-0 z-50 px-3 sm:px-6 pt-3">
+    <div className=" top-0 z-50 px-3 sm:px-6 pt-3">
       <div
         style={{
           backgroundColor: bg,
