@@ -17,7 +17,7 @@ function App() {
   const [mode, setMode] = useState("dark");
 
   useEffect(() => {
-    document.body.style.backgroundColor = mode === "dark" ? "#08080F" : "#FAFAFC";
+    document.body.style.backgroundColor = mode === "dark" ? "#08080F" : "#e5e5e5";
   }, [mode]);
 
   const togglemode = () => {
