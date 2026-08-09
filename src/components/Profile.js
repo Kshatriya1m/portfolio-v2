@@ -136,8 +136,8 @@ export default function Profile({ mode, url, name, email }) {
 
             <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-6">
               <a
-                href="/mayank_full_stack_web_developer.pdf"
-                download="mayank_full_stack_web_developer.pdf"
+                href="/Mayank-Chauhan-Resume.pdf"
+                download="Mayank-Chauhan-Resume.pdf"
                 className="px-6 py-3 rounded-xl text-sm font-semibold transition"
                 style={{ background: `linear-gradient(90deg, ${indigo}, ${violet})`, color: "#FFFFFF" }}
               >
